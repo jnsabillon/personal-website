@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackie Sabillon — Product Designer</title>
+  <meta
+    name="description"
+    content="Jackie Sabillon — product designer based in New York City, originally from Tegucigalpa, Honduras. Currently designing at Slack."
+  />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Jackie Sabillon — Product Designer" />
+  <meta
+    property="og:description"
+    content="Product designer based in New York City. Currently designing at Slack."
+  />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="layout">
+      <section class="collage reveal" aria-label="A few snapshots of me">
+        <figure class="snap snap--portrait">
+          <span class="snap__frame">
+            <img
+              src="images/portrait.png"
+              alt="Jackie outdoors in a fur-collar puffer, hair blowing in the wind, a lake and snowy mountains behind her"
+              loading="lazy"
+            />
+          </span>
+        </figure>
+        <figure class="snap snap--friends">
+          <span class="snap__frame">
+            <img
+              src="images/friends.png"
+              alt="Jackie and a friend at a golden-hour dinner, captured on film"
+              loading="lazy"
+            />
+          </span>
+        </figure>
+        <figure class="snap snap--wedding">
+          <span class="snap__frame">
+            <img
+              src="images/wedding.png"
+              alt="Jackie and her partner at a wedding in front of an ivy-framed doorway"
+              loading="lazy"
+            />
+          </span>
+        </figure>
+      </section>
+
+      <div class="content">
+        <article class="bio reveal">
+          <p class="greeting"><span class="wave" aria-hidden="true">🐱</span> meow!</p>
+
+          <p>
+            Hey there, I'm Jackie! I'm a product designer based in New York City,
+            originally from Tegucigalpa, Honduras.
+          </p>
+
+          <p>
+            I'm currently designing experiences at
+            <span class="highlight">Slack</span>, working on improving the triaging
+            experience inside of the Activity tab. Before Slack, I worked across
+            consumer tools, healthcare, and research at
+            <span class="highlight">Google</span>,
+            <span class="highlight">Click Therapeutics</span>, and the
+            <span class="highlight">MIT Media Lab</span>.
+          </p>
+
+          <p>
+            What I care about most is clarity. Well designed experiences often go
+            unnoticed: interfaces that explain themselves, copy that says exactly
+            what it means, and flows that respect a person's time and attention. I
+            want to make technology simple to use for all.
+          </p>
+
+          <p>
+            Outside of work, I'm a figure skater, knitter, and film photographer. I
+            enjoy cuddling with my 2 cats and a good warehouse party with my partner
+            and friends.
+          </p>
+
+          <p class="signoff">— Jackie</p>
+        </article>
+
+        <footer class="contact reveal">
+          <p class="contact__lead">Connect or say hi —</p>
+          <ul class="contact__links">
+            <li><a href="mailto:jackiensabillon@gmail.com">Email</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/jnsabillon/" target="_blank" rel="noopener">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lightbox__close" type="button" aria-label="Close photo viewer">&times;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
