@@ -198,12 +198,10 @@
 
   button.addEventListener("click", async () => {
     if (!(await copyText(button.dataset.email))) return;
-    button.classList.add("is-copied");
     toast.textContent = `copied "${button.dataset.email}"`;
     toast.classList.add("is-visible");
     clearTimeout(timer);
     timer = setTimeout(() => {
-      button.classList.remove("is-copied");
       toast.classList.remove("is-visible");
     }, 2200);
   });

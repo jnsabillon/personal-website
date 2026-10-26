@@ -149,7 +149,9 @@ body {
   margin: 0 0 1.6em;
 }
 
-.description a {
+/* Bold pink text links that turn red and loosen up on hover */
+.description a,
+.dock__link {
   color: var(--heart);
   font-weight: 700;
   text-decoration: none;
@@ -160,13 +162,16 @@ body {
 }
 
 .description a:hover,
-.description a:focus-visible {
+.description a:focus-visible,
+.dock__link:hover,
+.dock__link:focus-visible {
   color: var(--red);
   letter-spacing: 0.12em;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .description a {
+  .description a,
+  .dock__link {
     transition: color 0.2s ease;
   }
 }
@@ -177,57 +182,30 @@ body {
 
 .dock {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  left: 50%;
+  bottom: 2rem;
   z-index: 2;
   display: flex;
-  gap: 0.75rem;
+  gap: 2rem;
+  transform: translateX(-50%);
 }
 
-.dock__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
+.dock__link {
+  padding: 0.5rem 0;
   border: 0;
-  border-radius: 50%;
   background: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
   cursor: pointer;
-}
-
-.dock__btn svg {
-  width: 44%;
-  height: 44%;
-  fill: var(--heart);
-  transition: fill 0.2s ease;
-}
-
-.dock__btn:hover svg,
-.dock__btn:focus-visible svg {
-  fill: var(--red);
-}
-
-.dock__btn:focus-visible {
-  outline: 2px solid var(--red);
-  outline-offset: 2px;
-}
-
-.dock__btn .icon-check,
-.dock__btn.is-copied .icon-mail {
-  display: none;
-}
-
-.dock__btn.is-copied .icon-check {
-  display: block;
-  fill: var(--red);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .toast {
   position: fixed;
   left: 50%;
-  bottom: 2rem;
+  bottom: 5rem;
   z-index: 3;
   padding: 0.9rem 1.5rem;
   border-radius: 999px;
